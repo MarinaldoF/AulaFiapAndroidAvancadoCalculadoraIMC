@@ -1,9 +1,13 @@
 package com.example.calculadoraimc
 
 internal fun getImcResult(pesoTxt: String, alturaTxt: String): IMCResult {
+
+    //variaveis responsáveis por quarta input do usuarios e calcular
     val peso = pesoTxt.toFloat()
     val altura = alturaTxt.toFloat()
     val imc = peso / (altura * altura)
+
+    //condição para validar se usuário está com peso elevado ou nao
     if (imc < 16){
         return IMCResult(Result.MAGREZA_III)
     } else if (imc < 17){
@@ -23,6 +27,9 @@ internal fun getImcResult(pesoTxt: String, alturaTxt: String): IMCResult {
     }
 }
 
+// classe que tem as label que vai ser apresentada para o usuarios quando clicar no
+// botao calcular
+
 data class IMCResult(val result: Result)
 enum class Result(val label: String) {
     MAGREZA_III("Magreza Severa"),
@@ -32,5 +39,6 @@ enum class Result(val label: String) {
     SOBREPESO("Sobrepeso"),
     OBESIDADE_I("Obesidade Grau I"),
     OBESIDADE_II("Obesidade GHrau II (severa)"),
-    OBESIDADE_III("Obesidade GHrau III (mórbida)")
+    OBESIDADE_III("Obesidade GHrau III (mórbida)"),
+    BLANK("Insira os valores de peso e altura corretamente!")
 }
