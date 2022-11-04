@@ -7,7 +7,7 @@ Atividade feita em kotlin
 
 -----
 
-Foi feito uma calculadora imc, feito  testes unitários essenciais, separando regras de negocios da main activy e colocando em outra classe util.kt
+Foi feito uma calculadora imc, feito  testes unitários essenciais, separando regras de negocios da main activy e colocando em outra classe util.kt, utilizado como framework de teste JUnit
 
 ---
 
