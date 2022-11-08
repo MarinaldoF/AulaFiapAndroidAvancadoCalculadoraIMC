@@ -2,9 +2,11 @@ package com.example.calculadoraimc
 
 internal fun getImcResult(pesoTxt: String, alturaTxt: String): IMCResult {
 
-    //variaveis responsáveis por quarta input do usuarios e calcular
+    //passando pesoTxt para float
     val peso = pesoTxt.toFloat()
+    //passanndo alturaTxt para float
     val altura = alturaTxt.toFloat()
+    //realizando o calculo e armazenando na variavel imc
     val imc = peso / (altura * altura)
 
     //condição para validar se usuário está com peso elevado ou nao
